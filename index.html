@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunCity Hospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/000/235/537/original/vector-blue-medical-healthcare-background-with-cardiograph.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff5858;
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav {
+            background-color: #00bcd4;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .circle {
+            width: 160px; /* Decreased width */
+            height: 160px; /* Decreased height */
+            border-radius: 50%;
+            background-color: #fff;
+            border: 6px solid #ff5858;
+            color: #ff5858;
+            font-size: 24px; /* Decreased font size */
+            text-align: left;
+            line-height: 140px; /* Adjusted line height */
+            text-transform: uppercase;
+            margin-right: 8px;
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        main {
+            padding: 50px;
+            text-align: justify;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .bg-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(5px);
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-img"></div>
+
+<header>
+    <div class="circle">SUNCITY &#x1F3E5;</div>
+    <div>
+        <h1>SUNCITY &#9764;  HOSPITAL</h1>
+        <p>Serving Mankind</p>
+    </div>
+</header>
+
+<nav>
+    <a href="home.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="doctors.html">Our Doctors</a>
+   <a href="ayushman.html">Ayushman Yojana</a>
+    <a href="#" id="contactBtn">Contact</a>
+</nav>
+
+<main>
+    <h2>Welcome to SunCity Hospital</h2>
+    <p>If we do not lay out ourselves in the service of mankind, whom should we serve?<br> At SunCity, we understand that your health is your most valuable asset, and we are committed to providing compassionate and comprehensive care to every patient who walks through our doors. With a team of highly skilled medical professionals and state-of-the-art facilities, we offer a wide range of medical services tailored to meet your individual needs. Whether you're seeking routine check-ups, specialized treatments, or emergency care, you can trust us to deliver top-quality healthcare with a personal touch. Your well-being is our top priority, and we strive to exceed your expectations at every step of your healthcare journey. Experience the difference at SunCity and take the first step towards a healthier, happier life today.</p>
+</main>
+
+<footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> SunCity Hospital. All rights reserved.
+</footer>
+
+<script>
+    document.getElementById("contactBtn").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "contact.html"; // Redirect to the contact page
+    });
+</script>
+
+</body>
+</html>
