@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SunCity Hospital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2e7d32); /* Gradient background */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover effect */
+        }
+
+        .service h2 {
+            color: #4CAF50; /* Green color */
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Services</h1>
+</header>
+
+<div class="services-container">
+    <div class="service">
+        <h2><i class="fas fa-stethoscope icon"></i>Outpatient Department (OPD)</h2>
+        <p>The Outpatient Department provides medical consultations, diagnostic services, and treatment for patients who do not require overnight hospitalization. It offers various specialist clinics and is often the first point of contact for patients seeking medical care.</p>
+    </div>
+    <div class="service">
+        <h2>Surgical Department</h2>
+        <p>The Surgical Department specializes in surgical procedures ranging from minor surgeries to complex operations. It is equipped with state-of-the-art operating rooms and staffed by skilled surgeons, anesthesiologists, and surgical nurses.</p>
+    </div>
+    
+<div class="service">
+    <h2>Inpatient Service (IP)</h2>
+    <p>The Inpatient Service provides care for patients who require overnight hospitalization. It includes medical and surgical wards, intensive care units (ICUs), and other specialized units to monitor and manage patients' conditions round-the-clock.</p>
+</div>
+
+<div class="service">
+    <h2>Nursing Department</h2>
+    <p>The Nursing Department comprises registered nurses and nursing assistants who provide patient care, administer medications, assist with procedures, and ensure patients' comfort and safety during their hospital stay.</p>
+</div>
+
+<div class="service">
+    <h2>Physical Medicine</h2>
+    <p>The Physical Medicine Department focuses on rehabilitation and physical therapy services for patients recovering from injuries, surgeries, or medical conditions. It aims to improve mobility, strength, and overall functional abilities.</p>
+</div>
+
+<div class="service">
+    <h2>Paramedical Department</h2>
+    <p>The Paramedical Department supports clinical services by providing diagnostic testing, therapeutic interventions, and other allied health services. It includes laboratory technicians, radiology technologists, and other specialized healthcare professionals.</p>
+</div>
+
+<div class="service">
+    <h2>Rehabilitation Department</h2>
+    <p>The Rehabilitation Department offers comprehensive rehabilitation programs for patients with physical disabilities, neurological disorders, and chronic conditions. It includes physical therapists, occupational therapists, speech therapists, and other specialists.</p>
+</div>
+
+<div class="service">
+    <h2>Dietary Department</h2>
+    <p>The Dietary Department provides nutrition assessment, counseling, and meal planning services for patients based on their medical conditions, dietary needs, and preferences. It ensures that patients receive appropriate nutrition to support their recovery and overall health.</p>
+</div>
+
+<div class="service">
+    <h2>Pharmacy Department</h2>
+    <p>The Pharmacy Department dispenses medications, provides medication counseling, and ensures the safe and effective use of drugs for patients. It works closely with healthcare providers to optimize medication therapy and manage patients' medication regimens.</p>
+</div>
+
+<div class="service">
+    <h2>Operation Theater Complex (OT)</h2>
+    <p>The Operation Theater Complex is equipped with advanced surgical facilities and equipment for performing surgical procedures. It includes operating rooms, pre-operative and post-operative areas, and support services to ensure smooth and safe surgical care for patients.</p>
+</div>
+
+<div class="service">
+    <h2>Emergency Room Services</h2>
+    <p>The Emergency Room (ER) provides immediate medical care for patients with acute illnesses, injuries, or medical emergencies. It is staffed by emergency physicians, nurses, and other healthcare professionals trained to handle critical situations and stabilize patients.</p>
+</div>
+
+<div class="service">
+    <h2>Short-term Hospitalization</h2>
+    <p>Short-term Hospitalization involves admission to the hospital for a brief period, typically less than 24 hours, for medical observation, diagnostic tests, or minor procedures that do not require overnight stays. It allows patients to receive specialized care and treatment on a short-term basis.</p>
+</div>
+
+<div class="service">
+    <h2>Blood Services</h2>
+    <p>The Blood Services department manages blood donations, blood transfusions, and related services to support patients in need of blood products. It ensures the safe collection, testing, storage, and distribution of blood components to meet patients' transfusion requirements.</p>
+</div>
+
+<div class="service">
+    <h2>Laboratory Services</h2>
+    <p>The Laboratory Services department conducts diagnostic tests, analyzes specimens, and provides accurate and timely results to assist in the diagnosis, monitoring, and treatment of various medical conditions. It includes clinical chemistry, hematology, microbiology, and other specialized laboratories.</p>
+</div>
+
+<div class="service">
+    <h2>Cardiology Services</h2>
+    <p>The Cardiology Services department specializes in the diagnosis, treatment, and management of cardiovascular diseases and conditions. It offers a wide range of cardiac diagnostic tests, interventional procedures, and cardiac rehabilitation programs to improve heart health and outcomes for patients.</p>
+</div>
+
+<div class="service">
+    <h2>Orthopedic Services</h2>
+    <p>The Orthopedic Services department focuses on the diagnosis and treatment of musculoskeletal disorders and injuries, including fractures, joint conditions, and sports-related injuries. It offers surgical and non-surgical interventions, rehabilitation programs, and orthopedic specialty clinics to restore mobility and function for patients.</p>
+</div>
+
+<div class="service">
+    <h2>NICU's, ICU's, Private Ward & General Ward</h2>
+    <p>We also provide Neonatal Intensive Care Units (NICU), Intensive Care Units (ICU), Private Wards, and General Wards to cater to the specialized needs of patients requiring intensive medical care, personalized attention, or standard inpatient accommodations.</p>
+</div>
+
+    <!-- Add more service divs here -->
+</div>
+
+<footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> SunCity Hospital. All rights reserved.
+</footer>
+
+</body>
+</html>
