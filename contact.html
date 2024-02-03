@@ -50,8 +50,9 @@
         .call-us-btn:hover {
             background-color: #45a049;
         }
-      /*style for whtsp btn*/
- .whatsapp-btn {
+
+        /* Style for WhatsApp button */
+        .whatsapp-btn {
             display: inline-block;
             padding: 15px 30px;
             background-color: #25D366; /* WhatsApp green color */
@@ -70,8 +71,6 @@
         .whatsapp-btn:hover {
             background-color: #128C7E; /* Darker WhatsApp green on hover */
         }
-
-
 
         .container {
             max-width: 800px;
@@ -167,14 +166,13 @@
     <div class="contact-info">
         <h2>Contact Information</h2>
         <p>If you have any questions or inquiries, feel free to reach out to us.</p>
-        <p><i class="fas fa-phone icon"></i> Phone: 07080310355</p>
+        <p><i class="fas fa-phone icon"></i> Phone: 0708310355</p>
         <p><i class="far fa-envelope icon"></i> Email: suncityhospital@myyahoo.com</p>
         <a href="tel:07080310355" class="call-us-btn">Call Us</a>
-      <!-- WhatsApp Button -->
+        <!-- WhatsApp Button -->
         <a href="https://wa.me/+919151790983" class="whatsapp-btn" target="_blank">
             <i class="fab fa-whatsapp icon"></i> Chat with Us on WhatsApp
         </a>
-
     </div>
 
     <!-- Map -->
@@ -184,17 +182,29 @@
        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.0508432026136!2d83.3811878750674!3d26.742753567374614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39914481533b6789%3A0xeedc471ed21dc003!2sSun%20City%20Hospital!5e0!3m2!1sen!2sin!4v1706485062304!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-   <!-- Contact Form (Optional) -->
+    <!-- Contact Form (Optional) -->
     <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form>
+        <h2>Book an Appointment</h2>
+        <form action="mailto:suncityhospital@myyahoo.com?subject=BOOK APPOINTMENT" method="post" enctype="text/plain">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="transgender">Transgender</option>
+            </select><br><br>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Book Appointment">
         </form>
     </div>
 </div>
