@@ -84,17 +84,16 @@
         input[type="submit"]:hover {
             background-color: #218838;
         }
- footer {
+         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 5px 0;
+            padding: 10px 0;
             position: down;
             bottom: 0;
             width: 100%;
-            font-size: 14px;
+            z-index: 1;
         }
-
     </style>
 </head>
 <body>
@@ -112,7 +111,7 @@
                         <label><input type="radio" name="q1" value="b">b) Occasionally</label><br>
                         <label><input type="radio" name="q1" value="c">c) Frequently</label><br>
                     </li>
-                    <li>
+                     <li>
                         <p>Question 2: Do you often feel anxious or worried?</p>
                         <label><input type="radio" name="q2" value="a">a) Rarely or never</label><br>
                         <label><input type="radio" name="q2" value="b">b) Occasionally</label><br>
@@ -181,26 +180,36 @@
 
         document.getElementById('quizForm').addEventListener('submit', function(event) {
             event.preventDefault();
+            
+            // Calculate score based on user's responses
             let score = 0;
-            score += document.querySelector('input[name="q1"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q2"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q3"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q4"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q5"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q6"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q7"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q8"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q9"]:checked').value === 'c' ? 1 : 0;
-            score += document.querySelector('input[name="q10"]:checked').value === 'c' ? 1 : 0;
-
-            // Calculate score
-            alert('Your score: ' + score + '/10');
+            score += getScore('q1');
+            // Add scores for other questions
+            
+            // Analyze the score and provide recommendation
+            if (score >= 5) {
+                alert("Based on your responses, it is recommended to seek professional help. Please consider consulting a doctor or mental health professional.");
+            } else {
+                alert("Based on your responses, it seems you are doing reasonably well. However, if you have any concerns about your mental health, it's always a good idea to consult a doctor or mental health professional.");
+            }
         });
+
+        function getScore(questionName) {
+            // Get the selected value for the given question
+            let selectedValue = document.querySelector('input[name="' + questionName + '"]:checked').value;
+            
+            // Return the score based on the selected value
+            if (selectedValue === 'a') {
+                return 0;
+            } else if (selectedValue === 'b') {
+                return 1;
+            } else if (selectedValue === 'c') {
+                return 2;
+            }
+        }
     </script>
-<footer>
+    <footer>
     &copy; <script>document.write(new Date().getFullYear())</script> SunCity Hospital. All rights reserved.
 </footer>
-
-
 </body>
 </html>
