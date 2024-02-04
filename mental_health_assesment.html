@@ -84,16 +84,16 @@
         input[type="submit"]:hover {
             background-color: #218838;
         }
-         footer {
+footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 5px 0;
             position: down;
             bottom: 0;
             width: 100%;
             z-index: 1;
-        }
+
     </style>
 </head>
 <body>
@@ -111,7 +111,7 @@
                         <label><input type="radio" name="q1" value="b">b) Occasionally</label><br>
                         <label><input type="radio" name="q1" value="c">c) Frequently</label><br>
                     </li>
-                     <li>
+                    <li>
                         <p>Question 2: Do you often feel anxious or worried?</p>
                         <label><input type="radio" name="q2" value="a">a) Rarely or never</label><br>
                         <label><input type="radio" name="q2" value="b">b) Occasionally</label><br>
@@ -165,7 +165,6 @@
                         <label><input type="radio" name="q10" value="b">b) Occasionally</label><br>
                         <label><input type="radio" name="q10" value="c">c) Frequently</label><br>
                     </li>
-                    <!-- Repeat for other questions -->
                 </ol>
                 <input type="submit" value="Submit Quiz">
             </form>
@@ -184,10 +183,18 @@
             // Calculate score based on user's responses
             let score = 0;
             score += getScore('q1');
-            // Add scores for other questions
-            
+            score += getScore('q2');
+            score += getScore('q3');
+            score += getScore('q4');
+            score += getScore('q5');
+            score += getScore('q6');
+            score += getScore('q7');
+            score += getScore('q8');
+            score += getScore('q9');
+            score += getScore('q10');
+
             // Analyze the score and provide recommendation
-            if (score >= 5) {
+            if (score >= 7) {
                 alert("Based on your responses, it is recommended to seek professional help. Please consider consulting a doctor or mental health professional.");
             } else {
                 alert("Based on your responses, it seems you are doing reasonably well. However, if you have any concerns about your mental health, it's always a good idea to consult a doctor or mental health professional.");
@@ -208,8 +215,9 @@
             }
         }
     </script>
-    <footer>
+<footer>
     &copy; <script>document.write(new Date().getFullYear())</script> SunCity Hospital. All rights reserved.
 </footer>
+
 </body>
 </html>
