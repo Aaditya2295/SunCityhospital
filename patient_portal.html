@@ -82,23 +82,28 @@
         }
 
         footer {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            margin-top: 20px;
             padding: 10px 0;
-        }
-
-        footer p {
-            color: #666;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to the Patient Portal</h1>
+<p> This site is under maintenance. Sorry for inconvenience caused.</p>
+
     </header>
     <main>
         <form id="loginForm">
             <h2>Login</h2>
+            
+
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label>
@@ -109,12 +114,11 @@
     <section id="dashboardSection">
         <h2>Dashboard</h2>
         <!-- Add dashboard content here (e.g., appointment history, lab results, etc.) -->
-        <p>This is your dashboard. You are logged in.</p>
+        <p>The site is under maintenance. We will serve soon.</p>
     </section>
-    <footer>
-        <p>&copy; 2024 Patient Portal. All rights reserved.</p>
-    </footer>
-
+   <footer>
+    &copy; <script>document.write(new Date().getFullYear())</script> SunCity Hospital. All rights reserved.
+</footer>
     <script>
         const loginForm = document.getElementById('loginForm');
         const dashboardSection = document.getElementById('dashboardSection');
