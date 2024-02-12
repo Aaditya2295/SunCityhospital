@@ -39,7 +39,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 10px; /* Adjusted margin */
             font-weight: bold;
             transition: color 0.3s;
         }
@@ -49,15 +49,15 @@
         }
 
         .circle {
-            width: 160px; /* Decreased width */
-            height: 160px; /* Decreased height */
+            width: 120px; /* Adjusted width */
+            height: 120px; /* Adjusted height */
             border-radius: 50%;
             background-color: #fff;
-            border: 6px solid #ff5858;
+            border: 4px solid #ff5858;
             color: #ff5858;
-            font-size: 24px; /* Decreased font size */
+            font-size: 18px; /* Adjusted font size */
             text-align: left;
-            line-height: 140px; /* Adjusted line height */
+            line-height: 100px; /* Adjusted line height */
             text-transform: uppercase;
             margin-right: 8px;
             animation: pulse 2s infinite alternate;
@@ -73,7 +73,7 @@
         }
 
         main {
-            padding: 50px;
+            padding: 20px; /* Adjusted padding */
             text-align: justify;
             line-height: 1.6;
             position: relative;
@@ -85,7 +85,7 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: down;
+            position: down; /* This value is not valid, should be 'fixed' or 'absolute' */
             bottom: 0;
             width: 100%;
             z-index: 1;
@@ -105,25 +105,23 @@
             background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
             border-radius: 10px;
             padding: 20px;
-            margin-top: 30px;
+            margin-top: 20px; /* Adjusted margin */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 80%; /* Adjust width as needed */
+            position: relative;
+            max-width: 90%; /* Adjusted width */
+            margin: 0 auto; /* Centering horizontally */
         }
 
         .emergency-panel h3 {
             color: #ff5858;
-            font-size: 28px;
+            font-size: 24px; /* Adjusted font size */
             margin-bottom: 15px;
             text-align: center;
         }
 
         .emergency-panel h4 {
             color: #555;
-            font-size: 18px;
+            font-size: 16px; /* Adjusted font size */
             margin-bottom: 15px;
             text-align: center;
         }
@@ -136,7 +134,7 @@
 
         .emergency-panel ul li {
             margin-bottom: 10px;
-            font-size: 18px;
+            font-size: 16px; /* Adjusted font size */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -145,8 +143,41 @@
         .emergency-panel ul li:before {
             content: "\2022"; /* Bullet point */
             color: #ff5858;
-            font-size: 20px;
+            font-size: 18px; /* Adjusted font size */
             margin-right: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav a {
+                margin: 0 5px; /* Adjusted margin for smaller screens */
+            }
+
+            .circle {
+                width: 100px; /* Adjusted width for smaller screens */
+                height: 100px; /* Adjusted height for smaller screens */
+                font-size: 16px; /* Adjusted font size for smaller screens */
+                line-height: 80px; /* Adjusted line height for smaller screens */
+            }
+
+            .emergency-panel {
+                max-width: 100%; /* Adjusted width for smaller screens */
+            }
+
+            .emergency-panel h3 {
+                font-size: 20px; /* Adjusted font size for smaller screens */
+            }
+
+            .emergency-panel h4 {
+                font-size: 14px; /* Adjusted font size for smaller screens */
+            }
+
+            .emergency-panel ul li {
+                font-size: 14px; /* Adjusted font size for smaller screens */
+            }
+
+            .emergency-panel ul li:before {
+                font-size: 16px; /* Adjusted font size for smaller screens */
+            }
         }
     </style>
 </head>
@@ -176,12 +207,12 @@
     <p><strong>If we do not lay out ourselves in the service of mankind, whom should we serve?<br> At SunCity, we understand that your health is your most valuable asset, and we are committed to providing compassionate and comprehensive care to every patient who walks through our doors. With a team of highly skilled medical professionals and state-of-the-art facilities, we offer a wide range of medical services tailored to meet your individual needs. Whether you're seeking routine check-ups, specialized treatments, or emergency care, you can trust us to deliver top-quality healthcare with a personal touch. Your well-being is our top priority, and we strive to exceed your expectations at every step of your healthcare journey. Experience the difference at SunCity and take the first step towards a healthier, happier life today.</strong></p>
     
     <!-- New Panel for Emergency Services -->
-    <di lass="emergency-panel">
+    <div class="emergency-panel">
         <h3><big><big><big>Emergency Services</big></big></big></h3>
         <h4><strong>24</strong> HOURS A DAY, <strong>7</strong> DAYS A WEEK, <strong>365</strong> DAYS A YEAR <br><strong>EVERY SECOND COUNTS
         <BR>EVERY EMERGENCY REQUIRES IMMEDIATE ACTION, OUR EXPERT TEAM IS ALWAYS READY FOR YOU</strong></h4>
         <ul>
-        <h3>SunCity Hospital Emergency Care<h3>
+        <h3>SunCity Hospital Emergency Care</h3>
             <li>24/7 Emergency Room</li>
              <li>24/7 Emergency Medical Services</li>
               <li>24/7 Ambulance Service</li>
