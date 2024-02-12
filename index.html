@@ -13,6 +13,7 @@
             background-size: cover;
             background-position: center;
             color: #333;
+            position: relative; /* Add relative positioning */
         }
 
         header {
@@ -84,14 +85,14 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: down;
             bottom: 0;
             width: 100%;
             z-index: 1;
         }
 
         .bg-img {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -100,10 +101,52 @@
             filter: blur(5px);
         }
 
-        @media only screen and (max-width: 768px) {
-            nav a {
-                margin: 0 10px;
-            }
+        .emergency-panel {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%; /* Adjust width as needed */
+        }
+
+        .emergency-panel h3 {
+            color: #ff5858;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .emergency-panel h4 {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .emergency-panel ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .emergency-panel ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .emergency-panel ul li:before {
+            content: "\2022"; /* Bullet point */
+            color: #ff5858;
+            font-size: 20px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -123,15 +166,35 @@
     <a href="home.html">Home</a>
     <a href="services.html">Services</a>
     <a href="doctors.html">Our Doctors</a>
-   <a href="ayushman.html">Ayushman Yojana</a>
-  <a href="health_assesment_tool.html">Self assessment</a>  
-  <a href="#" id="contactBtn">Contact</a>
-  
+    <a href="ayushman.html">Ayushman Yojana</a>
+    <a href="#" id="contactBtn">Contact</a>
+    <a href="health_assesment_tool.html">Self-assessment</a>
 </nav>
 
 <main>
-    <h2>Welcome to SunCity Hospital</h2>
-    <p>If we do not lay out ourselves in the service of mankind, whom should we serve?<br> At SunCity, we understand that your health is your most valuable asset, and we are committed to providing compassionate and comprehensive care to every patient who walks through our doors. With a team of highly skilled medical professionals and state-of-the-art facilities, we offer a wide range of medical services tailored to meet your individual needs. Whether you're seeking routine check-ups, specialized treatments, or emergency care, you can trust us to deliver top-quality healthcare with a personal touch. Your well-being is our top priority, and we strive to exceed your expectations at every step of your healthcare journey. Experience the difference at SunCity and take the first step towards a healthier, happier life today.</p>
+    <h2><big><big><big>Welcome to SunCity Hospital</big></big></big></h2>
+    <p><strong>If we do not lay out ourselves in the service of mankind, whom should we serve?<br> At SunCity, we understand that your health is your most valuable asset, and we are committed to providing compassionate and comprehensive care to every patient who walks through our doors. With a team of highly skilled medical professionals and state-of-the-art facilities, we offer a wide range of medical services tailored to meet your individual needs. Whether you're seeking routine check-ups, specialized treatments, or emergency care, you can trust us to deliver top-quality healthcare with a personal touch. Your well-being is our top priority, and we strive to exceed your expectations at every step of your healthcare journey. Experience the difference at SunCity and take the first step towards a healthier, happier life today.</strong></p>
+    
+    <!-- New Panel for Emergency Services -->
+    <di lass="emergency-panel">
+        <h3><big><big><big>Emergency Services</big></big></big></h3>
+        <h4><strong>24</strong> HOURS A DAY, <strong>7</strong> DAYS A WEEK, <strong>365</strong> DAYS A YEAR <br><strong>EVERY SECOND COUNTS
+        <BR>EVERY EMERGENCY REQUIRES IMMEDIATE ACTION, OUR EXPERT TEAM IS ALWAYS READY FOR YOU</strong></h4>
+        <ul>
+        <h3>SunCity Hospital Emergency Care<h3>
+            <li>24/7 Emergency Room</li>
+             <li>24/7 Emergency Medical Services</li>
+              <li>24/7 Ambulance Service</li>
+               <li>Trained Technicians For Emergency care</li>
+            <li>Emergency Surgery</li>
+            <li>Trauma Care</li>
+            <li>Emergency Pediatrics</li>
+             <li>Professionally Qualified Paramedic Team</li>
+             <li>Cardiac Emergency Care</li>
+              <li>Experienced ER Nursing Team</li>
+            <!-- Add more emergency services as needed -->
+        </ul>
+    </div>
 </main>
 
 <footer>
