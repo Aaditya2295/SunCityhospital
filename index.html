@@ -6,24 +6,7 @@
     <title>SunCity Hospital</title>
     <style>
         /* Your existing CSS styles here */
- .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 50px auto;
-    max-width: 600px;
-    position: relative;
-  }
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Snap scrolling to each panel */
-  }
-  .panel {
-    flex: 0 0 auto; /* Prevent panels from stretching */
-    width: 300px;
-    background-color: #f9f9f9;
+ 
     padding: 20px;
     margin-right: 10px; /* Added margin between panels */
     scroll-snap-align: start; /* Snap each panel to the start of the slider */
@@ -339,7 +322,7 @@
     <h2><big><big><big>Welcome to SunCity Hospital</big></big></big></h2>
     <p><strong>If we do not lay out ourselves in the service of mankind, whom should we serve?<br> At SunCity, we understand that your health is your most valuable asset, and we are committed to providing compassionate and comprehensive care to every patient who walks through our doors. With a team of highly skilled medical professionals and state-of-the-art facilities, we offer a wide range of medical services tailored to meet your individual needs. Whether you're seeking routine check-ups, specialized treatments, or emergency care, you can trust us to deliver top-quality healthcare with a personal touch. Your well-being is our top priority, and we strive to exceed your expectations at every step of your healthcare journey. Experience the difference at SunCity and take the first step towards a healthier, happier life today.</strong></p>
    
-  <div class="container">
+<!--  <div class="container">
     <div class="patient-stories">Our Patient’s Stories</div>
     <div class="slider">
       <div class="panel">
@@ -391,24 +374,7 @@
         event.preventDefault();
         window.location.href = "contact.html"; // Redirect to the contact page
     });
-   document.addEventListener('DOMContentLoaded', function() {
-    const panels = document.querySelectorAll('.panel');
-    let counter = 0;
 
-    function showPanel() {
-        panels.forEach(panel => {
-            panel.style.transform = `translateX(-${counter * 100}%)`; // Adjusted for horizontal sliding
-        });
-        counter = (counter + 1) % panels.length; // Update the counter
-    }
-
-    setInterval(() => {
-        showPanel();
-    }, 5000); // Set interval to 5 seconds (5000 milliseconds)
-    
-    // Initially show the first panel
-    showPanel();
-});
 
 
 </script>
