@@ -5,6 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SunCity Hospital</title>
     <style>
+        /* Your existing CSS styles here */
+ .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 600px;
+    position: relative;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap scrolling to each panel */
+  }
+  .panel {
+    flex: 0 0 auto; /* Prevent panels from stretching */
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-right: 10px; /* Added margin between panels */
+    scroll-snap-align: start; /* Snap each panel to the start of the slider */
+    position: relative;
+    text-align: right; /* Align text to the right */
+    padding-left: 40px; /* Add space from the left for the quotation marks */
+    transition: transform 0.5s ease;
+  }
+  .quotation-top-left,
+  .quotation-bottom-right {
+    font-size: 64px; /* Increased font size */
+    color: rgba(255, 128, 128, 0.5); /* Lighter red color with opacity */
+    font-family: Arial, sans-serif;
+    position: absolute;
+  }
+  .quotation-top-left {
+    top: 10px; /* Adjust position */
+    left: 10px; /* Adjust position */
+  }
+  .quotation-bottom-right {
+    bottom: 10px; /* Adjust position */
+    right: 10px; /* Adjust position */
+  }
+  .patient-stories {
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Larger font size */
+    margin-bottom: 20px; /* Added margin for spacing */
+    margin-left: 20px; /* Added margin from the left */
+    white-space: nowrap; /* Prevent line breaks */
+    margin-right: 20px; /* Added margin from the right */
+  }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -58,7 +108,6 @@
             font-size: 18px; /* Adjusted font size */
             text-align: left;
             line-height: 100px; /* Adjusted line height */
-         
             margin-right: 8px;
             animation: pulse 2s infinite alternate;
         }
@@ -85,7 +134,7 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: down; /* This value is not valid, should be 'fixed' or 'absolute' */
+            position: down; /* Fixed position */
             bottom: 0;
             width: 100%;
             z-index: 1;
@@ -147,9 +196,93 @@
             margin-right: 10px;
         }
 
+        .slider-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            flex: 0 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .slide p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .slide:nth-child(odd) {
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+
+        .slide:nth-child(even) {
+            transform: translateX(50%);
+            opacity: 0;
+        }
+
+        .slide.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+        }
+
+        .nav-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 50%;
+            width: 60px; /* Adjusted width */
+            height: 60px; /* Adjusted height */
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+            margin: 0 10px; /* Adjusted margin */
+            font-size: 24px; /* Adjusted font size */
+        }
+
+        .nav-button:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
         @media screen and (max-width: 768px) {
             nav a {
-                margin: 0 5px; /* Adjusted margin for smaller screens */
+                margin: 0 5px; /* Adjusted margin for
+
             }
 
             .circle {
@@ -194,36 +327,56 @@
 </header>
 
 <nav>
-    <a href="home.html">Home</a>
+     <a href="home.html">Home</a>
     <a href="services.html">Services</a>
     <a href="doctors.html">Our Doctors</a>
     <a href="health_assesment_tool.html">Self-assessment</a>
    <a href="ayushman.html">Ayushman Yojana</a>
     <a href="#" id="contactBtn">Contact</a>
-   
 </nav>
 
 <main>
     <h2><big><big><big>Welcome to SunCity Hospital</big></big></big></h2>
     <p><strong>If we do not lay out ourselves in the service of mankind, whom should we serve?<br> At SunCity, we understand that your health is your most valuable asset, and we are committed to providing compassionate and comprehensive care to every patient who walks through our doors. With a team of highly skilled medical professionals and state-of-the-art facilities, we offer a wide range of medical services tailored to meet your individual needs. Whether you're seeking routine check-ups, specialized treatments, or emergency care, you can trust us to deliver top-quality healthcare with a personal touch. Your well-being is our top priority, and we strive to exceed your expectations at every step of your healthcare journey. Experience the difference at SunCity and take the first step towards a healthier, happier life today.</strong></p>
-    
-    <!-- New Panel for Emergency Services -->
+   
+  <div class="container">
+    <div class="patient-stories">Our Patient’s Stories</div>
+    <div class="slider">
+      <div class="panel">
+        <div class="quotation-top-left">&ldquo;</div>
+        <div style="margin-right: 30px;"><br><strong>Dr Suraj Singh is experienced and honest surgeon. He is very talented and honest person.</strong><br><br><i>P.K. Singh</i></div>
+        <div class="quotation-bottom-right">&rdquo;</div>
+      </div>
+      <div class="panel">
+        <div class="quotation-top-left">&ldquo;</div>
+        <div style="margin-right: 30px;"><br><strong>This is the best hospital of Gorakhpur, it has the best group of doctors.</strong><br><br><i>Aman Sharma</i></div>
+        <div class="quotation-bottom-right">&rdquo;</div>
+      </div>
+      <div class="panel">
+        <div class="quotation-top-left">&ldquo;</div>
+        <div style="margin-right: 30px;"><strong><br>I have experience of being cared and treated like own family members.</strong><br><br><i>Prashant Chand</i></div>
+        <div class="quotation-bottom-right">&rdquo;</div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Emergency Services Section -->
     <div class="emergency-panel">
         <h3><big><big><big>Emergency Services</big></big></big></h3>
         <h4><strong>24</strong> HOURS A DAY, <strong>7</strong> DAYS A WEEK, <strong>365</strong> DAYS A YEAR <br><strong>EVERY SECOND COUNTS
         <BR>EVERY EMERGENCY REQUIRES IMMEDIATE ACTION, OUR EXPERT TEAM IS ALWAYS READY FOR YOU</strong></h4>
         <ul>
-        <h3>SunCity Hospital Emergency Care</h3>
+            <h3>SunCity Hospital Emergency Care</h3>
             <li>24/7 Emergency Room</li>
-             <li>24/7 Emergency Medical Services</li>
-              <li>24/7 Ambulance Service</li>
-               <li>Trained Technicians For Emergency care</li>
+            <li>24/7 Emergency Medical Services</li>
+            <li>24/7 Ambulance Service</li>
+            <li>Trained Technicians For Emergency care</li>
             <li>Emergency Surgery</li>
             <li>Trauma Care</li>
             <li>Emergency Pediatrics</li>
-             <li>Professionally Qualified Paramedic Team</li>
-             <li>Cardiac Emergency Care</li>
-              <li>Experienced ER Nursing Team</li>
+            <li>Professionally Qualified Paramedic Team</li>
+            <li>Cardiac Emergency Care</li>
+            <li>Experienced ER Nursing Team</li>
             <!-- Add more emergency services as needed -->
         </ul>
     </div>
@@ -238,7 +391,34 @@
         event.preventDefault();
         window.location.href = "contact.html"; // Redirect to the contact page
     });
+   document.addEventListener('DOMContentLoaded', function() {
+    const panels = document.querySelectorAll('.panel');
+    let counter = 0;
+
+    function showPanel() {
+        panels.forEach(panel => {
+            panel.style.transform = `translateX(-${counter * 100}%)`; // Adjusted for horizontal sliding
+        });
+        counter = (counter + 1) % panels.length; // Update the counter
+    }
+
+    setInterval(() => {
+        showPanel();
+    }, 5000); // Set interval to 5 seconds (5000 milliseconds)
+    
+    // Initially show the first panel
+    showPanel();
+});
+
+
 </script>
+    
+    
+
+
+</script>
+
+
 
 </body>
 </html>
