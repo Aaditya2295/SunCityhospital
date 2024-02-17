@@ -30,27 +30,6 @@
             text-transform: uppercase;
         }
 
-        .subheader-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .subheader-links a {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 0 10px;
-            text-decoration: none; /* Remove underline from links */
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .subheader-links a:hover {
-            background-color: #2e7d32;
-        }
-
         .services-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -88,8 +67,8 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 5px 0;
-            position: down;
+            padding: 10px 0;
+            position: fixed;
             bottom: 0;
             width: 100%;
             font-size: 14px;
@@ -104,15 +83,12 @@
 <body>
 
 <header>
+<img src="logo.jpg" alt="Hospital Logo" class="logo">
     <h1>Our Services</h1>
-    <div class="subheader-links">
-        <a href="patient_portal.html" id="patient-portal-link">Patient Portal</a>
-        <a href="appointment.html" id="appointment-link">Appointment</a>
-    </div>
 </header>
 
 <div class="services-container">
- <div class="service">
+    <div class="service">
         <h2><i class="fas fa-stethoscope icon"></i>Outpatient Department (OPD)</h2>
         <p>The Outpatient Department provides medical consultations, diagnostic services, and treatment for patients who do not require overnight hospitalization. It offers various specialist clinics and is often the first point of contact for patients seeking medical care.</p>
     </div>
@@ -197,7 +173,6 @@
 </div>
 
     <!-- Add more service divs here -->
-    <!-- Your service content here -->
 </div>
 
 <footer>
