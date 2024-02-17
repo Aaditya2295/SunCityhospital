@@ -6,7 +6,7 @@
     <title>SunCity Hospital</title>
     <style>
         /* Your existing CSS styles here */
- .container {
+.container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -22,7 +22,8 @@
   }
   .panel {
     flex: 0 0 auto; /* Prevent panels from stretching */
-    width: 300px;
+    width: 80%; /* Adjusted width for phone screens */
+    max-width: 300px; /* Maximum width */
     background-color: #f9f9f9;
     padding: 20px;
     margin-right: 10px; /* Added margin between panels */
@@ -34,7 +35,7 @@
   }
   .quotation-top-left,
   .quotation-bottom-right {
-    font-size: 64px; /* Increased font size */
+    font-size: 48px; /* Adjusted font size for smaller screens */
     color: rgba(255, 128, 128, 0.5); /* Lighter red color with opacity */
     font-family: Arial, sans-serif;
     position: absolute;
@@ -49,7 +50,7 @@
   }
   .patient-stories {
     font-weight: bold; /* Bold text */
-    font-size: 18px; /* Larger font size */
+    font-size: 16px; /* Adjusted font size for smaller screens */
     margin-bottom: 20px; /* Added margin for spacing */
     margin-left: 20px; /* Added margin from the left */
     white-space: nowrap; /* Prevent line breaks */
@@ -404,11 +405,16 @@
 
     setInterval(() => {
         showPanel();
+        // Check if counter is at the last slide, then reset it to 0 to loop back to the first slide
+        if (counter === panels.length) {
+            counter = 0;
+        }
     }, 5000); // Set interval to 5 seconds (5000 milliseconds)
     
     // Initially show the first panel
     showPanel();
 });
+
 
 
 </script>
