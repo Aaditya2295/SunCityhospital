@@ -6,7 +6,7 @@
     <title>SunCity Hospital</title>
     <style>
         /* Your existing CSS styles here */
-.container {
+ .container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -22,8 +22,7 @@
   }
   .panel {
     flex: 0 0 auto; /* Prevent panels from stretching */
-    width: 80%; /* Adjusted width for phone screens */
-    max-width: 300px; /* Maximum width */
+    width: 300px;
     background-color: #f9f9f9;
     padding: 20px;
     margin-right: 10px; /* Added margin between panels */
@@ -35,7 +34,7 @@
   }
   .quotation-top-left,
   .quotation-bottom-right {
-    font-size: 48px; /* Adjusted font size for smaller screens */
+    font-size: 64px; /* Increased font size */
     color: rgba(255, 128, 128, 0.5); /* Lighter red color with opacity */
     font-family: Arial, sans-serif;
     position: absolute;
@@ -50,7 +49,7 @@
   }
   .patient-stories {
     font-weight: bold; /* Bold text */
-    font-size: 16px; /* Adjusted font size for smaller screens */
+    font-size: 18px; /* Larger font size */
     margin-bottom: 20px; /* Added margin for spacing */
     margin-left: 20px; /* Added margin from the left */
     white-space: nowrap; /* Prevent line breaks */
@@ -78,38 +77,22 @@
             z-index: 1;
         }
 
-      nav {
-    background-color: #00bcd4;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1;
-}
+        nav {
+            background-color: #00bcd4;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            z-index: 1;
+        }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s;
-    display: inline-block; /* Display items horizontally */
-    padding: 10px 20px; /* Add padding to each link */
-    white-space: nowrap; /* Prevent line breaks */
-}
-
-@media screen and (max-width: 768px) {
-    nav {
-        overflow-x: auto; /* Enable horizontal scrolling only on smaller screens */
-        white-space: nowrap; /* Prevent line breaks */
-    }
-
-    nav a {
-        margin: 0 5px; /* Adjusted margin for smaller screens */
-        padding: 10px; /* Adjusted padding for smaller screens */
-    }
-}
-
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px; /* Adjusted margin */
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
         nav a:hover {
             color: #ffeb3b;
@@ -421,16 +404,11 @@ nav a {
 
     setInterval(() => {
         showPanel();
-        // Check if counter is at the last slide, then reset it to 0 to loop back to the first slide
-        if (counter === panels.length) {
-            counter = 0;
-        }
     }, 5000); // Set interval to 5 seconds (5000 milliseconds)
     
     // Initially show the first panel
     showPanel();
 });
-
 
 
 </script>
